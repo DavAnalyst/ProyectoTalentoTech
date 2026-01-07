@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cimientos Construcciones S.A.S. - Tu proyecto comienza aquí</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="static/css/stylesmainpage.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="static/images/imagen.jpeg" alt="Cimientos Construcciones Logo" class="company-logo">
+                </div>
+                <div class="logo-text">
+                    <h1>Cimientos Construcciones S.A.S.</h1>
+                    <p>Tu proyecto comienza aquí</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/mainpage">Inicio</a></li>
+                    <li><a href="/pisos">Simulador</a></li>
+                    <li><a href="/mainpage#nosotros">Nosotros</a></li>
+                    <li><a href="/mainpage#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#" class="cart-icon" id="cart-toggle">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#" class="logout-btn" id="logout-btn" title="Cerrar Sesión">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h2>Construcción y Arquitectura</h2>
+            <p>Materiales de alta calidad para tus proyectos de construcción y remodelación.</p>
+            <a href="#productos" class="btn">Ver Productos</a>
+            <a href="#contacto" class="btn btn-outline">Contactar</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+            </div>
+            <div class="products">
+                <!-- Product 1 - Cemento -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="static/images/vivienda.jpg" alt="vivienda en construcción">
+                    </div>
+                    <div class="product-info">
+                        <h3>Construccion de Viviendas</h3>
+                        <p>Ofrecemos servicios completos de construcción de viviendas, desde el diseño hasta la entrega final.</p>                        
+                    </div>
+                </div>
+
+                <!-- Product 2 - Ladrillos -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="static/images/obra.jpg" alt="Obra en construcción">
+                    </div>
+                    <div class="product-info">
+                        <h3>Remodelaciones</h3>
+                        <p>Transforma tus espacios con nuestros servicios de remodelación personalizados.</p>
+                        <div class="product-actions">
+                            <a href="/pisos" class="btn simulate-btn">
+                                <i class="fas fa-paint-roller"></i>
+                                Simula tu remodelación
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 - Varillas -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="static/images/mantenimiento.jpg" alt="Mantenimiento de edificio">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mantenimiento</h3>
+                        <p>Servicios de mantenimiento preventivo y correctivo para edificaciones.</p>
+                    </div>
+                </div>
+                
+                <!-- Product 3 - Varillas -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="static/images/asesoria.jpeg" alt="Mantenimiento de edificio">
+                    </div>
+                    <div class="product-info">
+                        <h3>Asesoria Tecnica</h3>
+                        <p>Brindamos asesoría técnica especializada para garantizar la calidad y seguridad de tus proyectos.</p>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre Cimientos Construcciones</h2>
+                    <p>Con más de 15 años de experiencia en el sector de la construcción, en Cimientos Construcciones S.A.S. nos hemos consolidado como líderes en la distribución de materiales de construcción de alta calidad en Colombia.</p>
+                    <p>Nuestro compromiso es ofrecer productos que cumplan con los más altos estándares de calidad, asegurando la durabilidad y seguridad de cada proyecto que realizan nuestros clientes.</p>
+                    <p>Contamos con un equipo de profesionales altamente capacitados que brindan asesoría técnica especializada para garantizar que cada cliente reciba exactamente lo que necesita para su proyecto.</p>
+                    <a href="#contacto" class="btn">Contáctanos</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Equipo de construcción">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h3>Tu Carrito de Compras</h3>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-total">
+            Total: $<span id="cart-total">0</span>
+        </div>
+        <button class="checkout-btn">Proceder al Pago</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Cimientos Construcciones</h3>
+                    <p>Tu proyecto comienza aquí. Ofrecemos materiales de construcción de la más alta calidad para garantizar el éxito de tus obras.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Productos Destacados</h3>
+                    <ul>
+                        <li><a href="#">Cemento</a></li>
+                        <li><a href="#">Ladrillos</a></li>
+                        <li><a href="#">Varillas de Acero</a></li>
+                        <li><a href="#">Arena y Grava</a></li>
+                        <li><a href="#">Pinturas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-id-card"></i> NIT: 901988669-5</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Dirección: Cl. 128 #88 B – 10, Suba, Bogotá</li>
+                        <li><i class="fas fa-phone"></i> Teléfonos: 320 273 8391 – 300 749 7544</li>
+                        <li><i class="fas fa-envelope"></i> Email: cimientos2025@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Cimientos Construcciones S.A.S. - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div id="chatbot-toggle" class="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div id="chatbot-widget" class="chatbot-widget">
+            <div class="chatbot-header">
+                <h4><i class="fas fa-robot"></i> Asistente Virtual</h4>
+                <button id="chatbot-close" class="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        ¡Hola! Soy el asistente virtual de Cimientos Construcciones S.A.S. 
+                        ¿En qué puedo ayudarte hoy? Puedo informarte sobre nuestros servicios, 
+                        materiales, precios o el simulador de pisos.
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="user-message" placeholder="Escribe tu mensaje..." maxlength="200">
+                <button id="send-message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/mainpage.js"></script>
+    <script src="static/js/chatbot.js"></script>
+    <script>
+        // Verificar autenticación al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('authToken');
+            if (!token) {
+                // Si no hay token, redirigir al login
+                window.location.href = '/';
+            }
+        });
+    </script>
+</body>
+
+</html>

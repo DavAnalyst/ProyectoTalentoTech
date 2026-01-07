@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Construcción - Login</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Sección izquierda con información de la empresa -->
+        <div class="info-section">
+            <div class="company-info">
+                <img src="/static/images/imagen.jpeg" alt="Logo Construcción" class="company-logo">
+                <h1 class="company-name">Cimientos Construcciones</h1>
+                <p class="company-description">
+                    Líderes en construcción y desarrollo de proyectos arquitectónicos. 
+                    Más de 20 años construyendo el futuro con calidad y excelencia.
+                </p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-building"></i>
+                        <span>Proyectos Comerciales</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-home"></i>
+                        <span>Construcción Residencial</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tools"></i>
+                        <span>Remodelaciones</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección derecha con formularios -->
+        <div class="form-section">
+            <!-- Pestañas de navegación -->
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Iniciar Sesión
+                    </button>
+                    <button class="tab-btn" data-tab="register">
+                        <i class="fas fa-user-plus"></i>
+                        Registrarse
+                    </button>
+                </div>
+
+                <!-- Formulario de Login -->
+                <div class="tab-content active" id="login">
+                    <div class="form-container">
+                        <h2>Bienvenido de vuelta</h2>
+                        <p class="subtitle">Ingresa tus credenciales para acceder al sistema</p>
+                        
+                        <form id="loginForm" class="auth-form">
+                            <div class="form-group">
+                                <label for="loginUsername">
+                                    <i class="fas fa-user"></i>
+                                    Usuario
+                                </label>
+                                <input type="text" id="loginUsername" name="username" required 
+                                       placeholder="Ingresa tu usuario">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loginPassword">
+                                    <i class="fas fa-lock"></i>
+                                    Contraseña
+                                </label>
+                                <div class="password-input">
+                                    <input type="password" id="loginPassword" name="password" required 
+                                           placeholder="Ingresa tu contraseña">
+                                    <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Iniciar Sesión
+                            </button>
+                        </form>
+
+                        <div class="form-footer">
+                            <p>¿No tienes cuenta? <a href="#" onclick="switchTab('register')">Regístrate aquí</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Registro -->
+                <div class="tab-content" id="register">
+                    <div class="form-container">
+                        <h2>Crear Nueva Cuenta</h2>
+                        <p class="subtitle">Únete a nuestro equipo de construcción</p>
+                        
+                        <form id="registerForm" class="auth-form">
+                            <div class="form-group">
+                                <label for="registerUsername">
+                                    <i class="fas fa-user"></i>
+                                    Usuario
+                                </label>
+                                <input type="text" id="registerUsername" name="username" required 
+                                       placeholder="Elige un nombre de usuario">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="registerPassword">
+                                    <i class="fas fa-lock"></i>
+                                    Contraseña
+                                </label>
+                                <div class="password-input">
+                                    <input type="password" id="registerPassword" name="password" required 
+                                           placeholder="Mínimo 8 caracteres">
+                                    <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Crear Cuenta
+                            </button>
+                        </form>
+
+                        <div class="form-footer">
+                            <p>¿Ya tienes cuenta? <a href="#" onclick="switchTab('login')">Inicia sesión aquí</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para mensajes -->
+    <div class="modal" id="messageModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-icon" id="modalIcon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <h3 id="modalTitle">Título</h3>
+                <p id="modalMessage">Mensaje</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Cargando...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>
